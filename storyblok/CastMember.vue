@@ -1,10 +1,7 @@
 <template>
-    <div v-editable="blok">
-        <StoryBlokComponent 
-            v-for="blok in blok.columns"
-            :key="blok._uid"
-            :blok="blok"
-        />
+    <div v-editable="blok" class="col-sm-3 text-left mb-4">
+            <div class="label"><b>{{ blok.Title }}</b></div>
+            <div class="name">{{ blok.Name }}</div>
     </div>
 </template>
 
@@ -13,5 +10,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+    
+    .label, .name {
+        text-align: left;
+    }
 </style>
