@@ -5,7 +5,7 @@
                 <p class="mb-5"><i>{{ props.blok.ProjectOneLiner }}</i></p>
                 <img class="w-100 mb-5" :src="blok.HeaderImageDesktop.filename">
                 <div class="mb-4 d-flex justify-content-center flex-column align-items-center">
-                    <p class="mb-5">{{ props.blok.Description }}</p>
+                    <div class="mb-4" v-html="richtext(props.blok.Description)"></div>
                     <div class="row p-0">
                         <StoryblokComponent v-for="blok in props.blok.Cast" 
                         :key="blok._uid" 
@@ -21,6 +21,17 @@
 <script setup>
     const props = defineProps({ blok: Object })
 
+</script>
+
+<script>
+const storyblokApi = useStoryblokApi()
+export default {
+    methods: {
+        richtext(text) {
+            return storyblokApi.richTextResolver.render(text)
+        },
+    },
+}
 </script>
 
 <style lang="scss" scoped>
