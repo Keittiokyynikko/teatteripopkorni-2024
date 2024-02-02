@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         meta: [
             {
                 name: 'description',
-                content: 'Laadukasta teatteri aikuisille',
+                content: 'Aikuisille suunnattu harrastajateatteri Helsingissä',
             },
             {
                 hid: 'og:title',
@@ -26,12 +26,12 @@ export default defineNuxtConfig({
             {
                 hid: 'og:image',
                 property: 'og:image',
-                content: 'https://peikkometsa.fi/bg.jpg',
+                content: 'https://teatteripopkorni.fi/bg.jpg',
             },
             {
                 hid: 'og:description',
                 property: 'og:description',
-                content: 'Laadukasta teatteri aikuisille',
+                content: 'Aikuisille suunnattu harrastajateatteri Helsingissä',
             },
         ],
         script: [
