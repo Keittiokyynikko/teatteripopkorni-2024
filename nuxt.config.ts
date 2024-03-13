@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     },
 },
   devtools: { enabled: true },
-  modules: [['@storyblok/nuxt', { accessToken: process.env.ACCESS_TOKEN }]],
+  modules: [['@storyblok/nuxt', { accessToken: process.env.ACCESS_TOKEN_P }]],
   css: [
     '@/assets/styles/main.scss',
     'bootstrap/dist/css/bootstrap.css'
