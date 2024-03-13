@@ -26,7 +26,7 @@ export default defineNuxtConfig({
             {
                 hid: 'og:image',
                 property: 'og:image',
-                content: 'https://teatteripopkorni.fi/bg.jpg',
+                content: 'https://teatteripopkorni.fi/header.jpg',
             },
             {
                 hid: 'og:description',
