@@ -34,15 +34,6 @@ export default defineNuxtConfig({
                 content: 'Aikuisille suunnattu harrastajateatteri Helsingissä',
             },
         ],
-        script: [
-            {
-                src: '/js/gtm.js',
-            },
-            {
-                src: 'https://apps.elfsight.com/p/platform.js',
-                defer: '',
-            },
-        ],
     },
 },
   devtools: { enabled: true },
