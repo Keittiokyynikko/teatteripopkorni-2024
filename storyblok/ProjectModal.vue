@@ -3,23 +3,27 @@
         <div class="modal fade" :id="blok._uid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header d-flex flex-column justify-content-start align-items-start">
+                    <div class="modal-header">
                         <button type="button" class="close" @click="hideModal()" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <h2 class="modal-title" id="exampleModalLabel">{{ props.blok.Headline }}</h2>
                     </div>
                 <div class="modal-body">
-                    <p class="mb-5">{{ props.blok.TextContent }}</p>
                     <StoryblokComponent v-for="blok in blok.ModalContent" :key="blok._uid" :blok="blok" />
                 </div>
                 </div>
             </div>
             </div>
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="showModal()">
-                 {{ blok.ButtonText }}
-            </button>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start mt-5">
+                <div class="me-0 me-md-4 d-flex flex-row flex-md-column w-100 w-md-50 justify-content-between justify-content-md-center">
+                    <h5 class="head">{{ props.blok.Headline }}</h5>
+                    <h5 >{{ props.blok.Year }}</h5>
+                </div>
+                <button type="button" class="w-100 w-md-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="showModal()">
+                    {{ blok.ButtonText }}
+                </button>
+            </div>
     </div>
 </template>
 
@@ -48,8 +52,12 @@
         width: 90%;
     }
 
-    h2 {
+    h2, .head {
         font-family: 'Ultra';
+    }
+
+    h5 {
+        font-family: 'Open Sans';
     }
 
 .holder {

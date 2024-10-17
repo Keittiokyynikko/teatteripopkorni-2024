@@ -1,5 +1,5 @@
 <template>
-    <div class="ol col-lg-6 gx-2 ms-lg-4 me-lg-1" v-editable="blok">
+    <div class="col-lg-6 gx-2 ms-lg-4 me-lg-1" v-editable="blok">
         <StoryblokComponent 
             v-for="blok in blok.Content"
             :key="blok._uid"
@@ -15,8 +15,8 @@
 
 <style lang="scss" scoped>
     @keyframes slideDown {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from { transform: scale(0%); opacity: 0; }
+    to { transform: scake(1); opacity: 1; }
     }
 
     .slide-down {

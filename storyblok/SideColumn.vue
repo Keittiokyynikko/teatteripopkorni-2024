@@ -15,10 +15,10 @@
 
 <style lang="scss" scoped>
 
-    @keyframes slideDown {
-        from { transform: translateY(-100%); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-        }
+@keyframes slideDown {
+    from { transform: scale(0%); opacity: 0; }
+    to { transform: scake(1); opacity: 1; }
+    }
 
         .slide-down {
         animation: slideDown 1s ease-out;

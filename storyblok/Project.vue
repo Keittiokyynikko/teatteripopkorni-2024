@@ -6,13 +6,19 @@
                 <img class="w-100 mb-5" :src="blok.HeaderImageDesktop.filename">
                 <div class="mb-4 d-flex justify-content-center flex-column align-items-center">
                     <div class="mb-4" v-html="richtext(props.blok.Description)"></div>
-                    <div class="row p-0">
+                    <div class="row p-0 mb-5">
                         <StoryblokComponent v-for="blok in props.blok.Cast" 
                         :key="blok._uid" 
                         :is="blok.component"
                         :blok="blok" />
                     </div>
-                    <p class="h5 mt-4 text-left"><b>{{ props.blok.BookingText }}</b></p>
+                    <div v-if='props.blok.BookingText !== ""' class="booking-text">
+                        <p class="h5 p-5 booking text-center  mb-5"><b>{{ props.blok.BookingText }}</b></p>
+                    </div>
+                    <StoryblokComponent v-for="blok in props.blok.Images" 
+                    :key="blok._uid"
+                    :is="blok.ImageCarousel"
+                    :blok="blok"/>
                 </div>
             </div>
         </div>
@@ -51,6 +57,10 @@ export default {
     .main {
         background-color: #EFEBB4;
         width: 90%;
+    }
+
+    .booking {
+        background-color: #EFEBB4;
     }
 
     .holder {
