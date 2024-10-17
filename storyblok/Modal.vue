@@ -3,11 +3,11 @@
         <div class="modal fade" :id="blok._uid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel">{{ props.blok.Headline }}</h2>
+                    <div class="modal-header d-flex flex-column justify-content-start align-items-start">
                         <button type="button" class="close" @click="hideModal()" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                        <h2 class="modal-title" id="exampleModalLabel">{{ props.blok.Headline }}</h2>
                     </div>
                 <div class="modal-body">
                     <p class="mb-5">{{ props.blok.TextContent }}</p>
@@ -106,6 +106,7 @@
     border: 0 !important;
     background-color: transparent;
     font-size: 2rem;
+    padding: 0;
 }
 
 div Image {

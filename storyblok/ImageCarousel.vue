@@ -1,5 +1,6 @@
 <template>
     <div v-editable="blok">
+        <h2 class="mb-3">Galleria</h2>
         <div id="carouselExampleIndicators" class="carousel slide">
             <ol class="carousel-indicators">
                 <li v-for="(image, index) in props.blok.Images" :key="image.id" :data-bs-target="'#carouselExampleIndicators'" :data-bs-slide-to="index" :class="{ active: index === 0 }"></li>

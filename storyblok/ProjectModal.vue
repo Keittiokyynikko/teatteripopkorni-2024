@@ -15,12 +15,12 @@
             </div>
             </div>
 
-            <div class="d-flex flex-lg-row justify-content-between align-items-center mb-3">
-                <div class="d-flex flex-column w-50">
-                    <h6 class="head">{{ props.blok.Headline }}</h6>
-                    <h6 >{{ props.blok.Year }}</h6>
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start mt-5">
+                <div class="me-0 me-md-4 d-flex flex-row flex-md-column w-100 w-md-50 justify-content-between justify-content-md-center">
+                    <h5 class="head">{{ props.blok.Headline }}</h5>
+                    <h5 >{{ props.blok.Year }}</h5>
                 </div>
-                <button type="button" class="w-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="showModal()">
+                <button type="button" class="w-100 w-md-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="showModal()">
                     {{ blok.ButtonText }}
                 </button>
             </div>
@@ -54,6 +54,10 @@
 
     h2, .head {
         font-family: 'Ultra';
+    }
+
+    h5 {
+        font-family: 'Open Sans';
     }
 
 .holder {
@@ -110,6 +114,7 @@
     border: 0 !important;
     background-color: transparent;
     font-size: 2rem;
+    padding: 0;
 }
 
 div Image {
