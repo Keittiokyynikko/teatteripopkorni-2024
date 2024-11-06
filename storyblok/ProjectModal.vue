@@ -1,6 +1,6 @@
 <template>
     <div v-editable="blok">
-        <div class="modal fade" :id="blok._uid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" :id="uuid" tabindex="-1" role="dialog" aria-labelledby="ProjectModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -15,12 +15,12 @@
             </div>
             </div>
 
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start mt-5">
+            <div class="d-flex flex-column justify-content-between align-items-center align-items-md-start mt-5">
                 <div class="me-0 me-md-4 d-flex flex-row flex-md-column w-100 w-md-50 justify-content-between justify-content-md-center">
                     <h5 class="head">{{ props.blok.Headline }}</h5>
-                    <h5 >{{ props.blok.Year }}</h5>
+                    <h5 class="mb-3">{{ props.blok.Year }}</h5>
                 </div>
-                <button type="button" class="w-100 w-md-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#exampleModal" @click="showModal()">
+                <button type="button" class="w-100 w-md-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#ProjectModal" @click="showModal()">
                     {{ blok.ButtonText }}
                 </button>
             </div>
@@ -34,10 +34,10 @@
     const props = defineProps({ blok: Object })
 
     // Access the UUID of the component
-    const uuid = props.blok._uid
+    const uuid = computed(() => props.blok._uid)
 
     function showModal() {
-        blockModal = new $bootstrap.Modal(document.getElementById(uuid))
+        blockModal = new $bootstrap.Modal(document.getElementById(uuid.value))
         blockModal.show()
     }
 

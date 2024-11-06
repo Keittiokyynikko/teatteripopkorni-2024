@@ -3,6 +3,7 @@
       <Header />
       <slot />
       <Footer />
+
     </main>
   </template>
 
