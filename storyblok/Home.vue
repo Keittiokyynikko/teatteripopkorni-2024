@@ -2,6 +2,7 @@
   <div v-editable="blok" class="m-4 d-flex flex-column justify-content-lg-around flex-lg-row">
     <StoryblokComponent v-for="blok in blok.body" :key="blok._uid" :blok="blok"
     :class="{ 'hidden': !isVisible }" />
+
   </div>
 </template>
  
@@ -14,11 +15,8 @@
   defineProps({ blok: Object })
 
   onMounted(async () => {
-  // Varmistetaan, että DOM on päivittynyt ennen luokan lisäämistä
     await nextTick();
-  
-    // Heti kun komponentti on ladattu, asetetaan luokka näkyväksi
-    isVisible.value = true; // Lisätään .slide-down-luokka StoryblokComponentille
+    isVisible.value = true;
 });
 
 </script>
@@ -41,7 +39,7 @@ body {
 }
 
 .hidden {
-  opacity: 0; /* Aluksi näkymätön */
+  opacity: 0;
   transition: 0.5s;
 }
 

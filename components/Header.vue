@@ -3,8 +3,7 @@
         <div class="holder">
             <img
               src="/poppari-neon_01.png"
-              alt="Teatteri Popkorni Logo"
-              className={styles.vercelLogo}
+              alt="Teatteri Popkorni Logo"             
               priority
             />
         </div>

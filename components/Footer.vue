@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-            <div class="holder">
-                <p>(C) Teatteri Popkorni 2023-</p>
+            <div class="holder p-4 px-5">
+                <p>© Teatteri Popkorni 2024-</p>
             </div>
         </div>
 </template>
@@ -18,6 +18,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .holder {
+        background-color: #C7F2F1;
     }
 
 </style>
