@@ -6,7 +6,6 @@
             :style="{ '--background-color': blok.BackgroundColor }">
             <div class="m-4 d-flex justify-content-center flex-column">
                 <div class="mb-4" v-html="richtext(blok.TextContent)"></div>
-                
                 <StoryblokComponent v-for="blok in blok.Content" :key="blok._uid" :blok="blok" />
             </div>
         </div>
