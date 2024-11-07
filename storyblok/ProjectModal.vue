@@ -15,10 +15,10 @@
             </div>
             </div>
 
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start mt-5">
+            <div class="d-flex flex-column justify-content-between align-items-center align-items-md-start mt-5">
                 <div class="me-0 me-md-4 d-flex flex-row flex-md-column w-100 w-md-50 justify-content-between justify-content-md-center">
                     <h5 class="head">{{ props.blok.Headline }}</h5>
-                    <h5 >{{ props.blok.Year }}</h5>
+                    <h5 class="mb-3">{{ props.blok.Year }}</h5>
                 </div>
                 <button type="button" class="w-100 w-md-40 ms-10 btn btn-primary" data-toggle="modal" data-target="#ProjectModal" @click="showModal()">
                     {{ blok.ButtonText }}

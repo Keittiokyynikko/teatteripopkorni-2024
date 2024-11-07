@@ -32,7 +32,7 @@ body {
 }
 
 .hidden {
-  opacity: 0; /* Aluksi näkymätön */
+  opacity: 0;
   transition: 0.5s;
 }
 
