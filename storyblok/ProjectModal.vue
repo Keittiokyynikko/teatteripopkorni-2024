@@ -5,8 +5,6 @@
 			:id="uuid"
 			tabindex="-1"
 			role="dialog"
-			aria-labelledby="ProjectModalLabel"
-			aria-hidden="true"
 		>
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -15,7 +13,6 @@
 							type="button"
 							class="close"
 							@click="hideModal()"
-							aria-label="Close"
 						>
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -35,7 +32,7 @@
 			class="d-flex flex-column justify-content-between align-items-center align-items-md-start mt-5"
 		>
 			<div
-				class="me-0 me-md-4 d-flex flex-row flex-md-column w-100 w-md-50 justify-content-between justify-content-md-center"
+				class="me-0 me-md-4 d-flex flex-column flex-sm-row flex-lg-column w-100 w-md-50 justify-content-between justify-content-lg-center"
 			>
 				<h5 class="head">{{ props.blok.Headline }}</h5>
 				<h5 class="mb-3">{{ props.blok.Year }}</h5>

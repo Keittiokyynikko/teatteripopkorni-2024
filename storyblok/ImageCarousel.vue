@@ -1,7 +1,7 @@
 <template>
 	<div v-editable="blok">
 		<h2 class="mb-3">Galleria</h2>
-		<div :id="uuid" class="carousel slide" data-bs-ride="carousel">
+		<div :id="uuid" class="carousel slide pointer-event" data-bs-ride="carousel">
 			<ol class="carousel-indicators">
 				<li
 					v-for="(image, index) in props.blok.Images"
@@ -9,6 +9,7 @@
 					:data-bs-target="'#carouselIndicators'"
 					:data-bs-slide-to="index"
 					:class="{ active: index === 0 }"
+					aria-disabled="true"
 				></li>
 			</ol>
 			<div class="carousel-inner">
@@ -42,14 +43,13 @@
 </template>
 
 <script setup>
-	import { defineProps, onMounted } from "vue";
-	const { $bootstrap } = useNuxtApp();
+	import { defineProps } from "vue";
 
 	const props = defineProps({
 		blok: Object,
 	});
 
-	const uuid = `carousel-${props.blok._uid}`;
+	const uuid = computed(() => `carousel-${props.blok._uid}`);
 </script>
 
 <style lang="scss" scoped>

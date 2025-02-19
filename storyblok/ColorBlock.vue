@@ -15,6 +15,7 @@
 			:style="{ '--background-color': blok.BackgroundColor }"
 		>
 			<div class="m-4 d-flex justify-content-center flex-column">
+				<img v-if="blok.HeaderImage" :class="blok.HeaderImage.filename !== '' ? 'header mb-4' : 'd-none'" :src="blok.HeaderImage.filename" />
 				<div class="mb-4" v-html="richtext(blok.TextContent)"></div>
 				<StoryblokComponent
 					v-for="blok in blok.Content"

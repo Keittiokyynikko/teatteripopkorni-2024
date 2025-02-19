@@ -10,9 +10,6 @@
 <script setup>
 	import { ref, onMounted } from "vue";
 
-	definePageMeta({
-		scrollToTop: true,
-	});
 
 	defineProps({ blok: Object });
 </script>

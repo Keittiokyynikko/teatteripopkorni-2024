@@ -1,11 +1,11 @@
 <template>
 	<div v-editable="blok" class="d-flex justify-content-center">
 		<div class="d-flex flex-column justify-content-center">
-			<div class="h2 headline-info">{{ props.blok.ProjectName }}</div>
-			<p class="mb-5">
+			<div class="h2 mb-5 headline-info">{{ props.blok.ProjectName }}</div>
+			<p v-if="props.blok.ProjectOneLiner !== ''" class="mb-5">
 				<i>{{ props.blok.ProjectOneLiner }}</i>
 			</p>
-			<img class="w-100 mb-5" :src="blok.HeaderImageDesktop.filename" />
+			<img v-if="blok.HeaderImageDesktop.filename !== ''" class="w-100 mb-5" :src="blok.HeaderImageDesktop.filename" />
 			<div
 				class="mb-4 d-flex justify-content-center flex-column align-items-center"
 			>
